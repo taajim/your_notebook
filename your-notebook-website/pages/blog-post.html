@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Article — Your Notebook</title>
+  <meta name="description" content="An article from Mahu's Notebook.">
+  <link rel="icon" type="image/svg+xml" href="../images/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/blog-post.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__mark">M</span>
+        Your Notebook
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="primaryNav">
+        <ul class="nav__list">
+          <li><a href="../index.html" class="nav__link">Home</a></li>
+          <li><a href="blog.html" class="nav__link is-active">Blog</a></li>
+          <li><a href="projects.html" class="nav__link">Projects</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary btn--sm nav__cta">Say hello</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ ARTICLE HEADER ============ -->
+    <section class="article-header">
+      <div class="container container--narrow">
+        <a href="blog.html" class="back-link">&larr; Back to all articles</a>
+        <p class="eyebrow" id="postTopic">Topic</p>
+        <h1 id="postTitle">Article title</h1>
+        <div class="article-meta">
+          <img class="article-meta__avatar" src="../images/icons/avatar.svg" alt="Mahu's avatar">
+          <div>
+            <p class="article-meta__name">Notebook</p>
+            <p class="article-meta__date"><span id="postDate">Date</span> &middot; <span id="postReadTime">Read time</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container container--narrow article-cover">
+      <img id="postCover" src="../images/blog/post-1.svg" alt="Article cover illustration">
+    </div>
+
+    <!-- ============ ARTICLE BODY ============ -->
+    <article class="section section--tight">
+      <div class="container container--narrow">
+        <div class="article-body" id="postBody">
+          <!-- Populated by js/blog-post.js based on ?post= query param -->
+        </div>
+
+        <ul class="tag-list article-tags" id="postTags"></ul>
+
+        <div class="share-row">
+          <span class="share-row__label">Share this article</span>
+          <div class="share-row__links">
+            <a href="#" class="btn btn--outline btn--sm">Twitter / X</a>
+            <a href="#" class="btn btn--outline btn--sm">LinkedIn</a>
+            <a href="#" class="btn btn--outline btn--sm" id="copyLinkBtn">Copy link</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ AUTHOR CARD ============ -->
+    <section class="section--tight">
+      <div class="container container--narrow">
+        <div class="author-card">
+          <img src="../images/icons/avatar.svg" alt="Mahu's avatar" class="author-card__avatar">
+          <div>
+            <p class="author-card__name">Written by Mahu</p>
+            <p class="author-card__bio">CSE undergraduate at Varendra University, writing about operating systems and front-end development while building this very site as a coursework project.</p>
+            <a href="about.html" class="btn--ghost">More about us &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMMENTS (with popup form trigger) ============ -->
+    <section class="section section--alt">
+      <div class="container container--narrow">
+        <div class="comments-header">
+          <h2>Comments (3)</h2>
+          <button class="btn btn--primary" type="button" data-modal-trigger="modal-comment">Add a comment</button>
+        </div>
+
+        <ul class="comment-list">
+          <li class="comment">
+            <img src="../images/icons/avatar.svg" alt="" class="comment__avatar">
+            <div class="comment__body">
+              <p class="comment__author">Tahmid R. <span class="comment__date">2 days ago</span></p>
+              <p class="comment__text">This explanation of the safe-state check finally made the algorithm click for me before the exam. Thank you!</p>
+            </div>
+          </li>
+          <li class="comment">
+            <img src="../images/icons/avatar.svg" alt="" class="comment__avatar">
+            <div class="comment__body">
+              <p class="comment__author">Nusrat J. <span class="comment__date">5 days ago</span></p>
+              <p class="comment__text">Could you do a follow-up comparing this with the wait-for graph approach for deadlock detection?</p>
+            </div>
+          </li>
+          <li class="comment">
+            <img src="../images/icons/avatar.svg" alt="" class="comment__avatar">
+            <div class="comment__body">
+              <p class="comment__author">Rafiul K. <span class="comment__date">1 week ago</span></p>
+              <p class="comment__text">Clean write-up. The matrix table layout is much easier to follow than the textbook's version.</p>
+            </div>
+          </li>
+        </ul>
+
+        <p class="comment-disclaimer">This is a static demo — the comment form below doesn't submit data anywhere, it's for interface demonstration only.</p>
+      </div>
+    </section>
+
+    <!-- ============ RELATED POSTS ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Keep reading</p>
+          <h2>Related articles</h2>
+        </div>
+        <div class="grid grid--blog">
+          <article class="blog-card">
+            <a class="blog-card__media" href="blog-post.html?post=process-synchronization">
+              <img src="../images/blog/post-3.svg" alt="Abstract illustration representing process synchronization" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span>Operating Systems</span><span class="dot"></span><span>May 29, 2026</span></div>
+              <h3 class="blog-card__title"><a href="blog-post.html?post=process-synchronization">Process synchronization without losing your mind</a></h3>
+              <p class="blog-card__excerpt">Race conditions, critical sections, and why semaphores clicked for me only after I drew them as traffic lights.</p>
+              <a class="blog-card__readmore" href="blog-post.html?post=process-synchronization">Read article <span class="arrow">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <a class="blog-card__media" href="blog-post.html?post=virtual-memory-paging">
+              <img src="../images/blog/post-6.svg" alt="Abstract illustration representing virtual memory and paging" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span>Operating Systems</span><span class="dot"></span><span>Apr 30, 2026</span></div>
+              <h3 class="blog-card__title"><a href="blog-post.html?post=virtual-memory-paging">Virtual memory and paging, explained with a bookshelf</a></h3>
+              <p class="blog-card__excerpt">Page tables, TLBs, and the analogy that made address translation finally stick.</p>
+              <a class="blog-card__readmore" href="blog-post.html?post=virtual-memory-paging">Read article <span class="arrow">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <a class="blog-card__media" href="blog-post.html?post=exam-study-plan">
+              <img src="../images/blog/post-4.svg" alt="Abstract illustration representing study planning" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span>Academics</span><span class="dot"></span><span>May 20, 2026</span></div>
+              <h3 class="blog-card__title"><a href="blog-post.html?post=exam-study-plan">Surviving CSE 3203: a study plan that actually worked</a></h3>
+              <p class="blog-card__excerpt">How I broke down Silberschatz and Galvin into a two-week revision plan without burning out.</p>
+              <a class="blog-card__readmore" href="blog-post.html?post=exam-study-plan">Read article <span class="arrow">&rarr;</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">Your Notebook</p>
+          <p class="footer__about">A running notebook of operating-systems write-ups and web projects, built by a CSE undergraduate at Varendra University.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Navigate</p>
+          <ul class="footer__list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Topics</p>
+          <ul class="footer__list">
+            <li><a href="blog.html?topic=operating-systems">Operating Systems</a></li>
+            <li><a href="blog.html?topic=web-development">Web Development</a></li>
+            <li><a href="blog.html?topic=academics">Academics</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Your Notebook. Built with HTML &amp; CSS.</p>
+        <ul class="footer__social">
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:mahu@example.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ COMMENT POPUP FORM ============ -->
+  <div class="modal-overlay" id="modal-comment" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-comment-title">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close dialog">&times;</button>
+      <p class="eyebrow modal__eyebrow">Join the discussion</p>
+      <h3 class="modal__title" id="modal-comment-title">Add a comment</h3>
+
+      <form data-demo-form="comment" novalidate>
+        <div class="form-field--row">
+          <div class="form-field">
+            <label for="commentName">Name</label>
+            <input type="text" id="commentName" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-field">
+            <label for="commentEmail">Email</label>
+            <input type="email" id="commentEmail" name="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="commentText">Comment</label>
+          <textarea id="commentText" name="comment" placeholder="Share your thoughts on this article…" required></textarea>
+        </div>
+        <p class="form-hint">This form is for interface demonstration only — comments are not actually published.</p>
+        <button type="submit" class="btn btn--primary btn--block">Post comment</button>
+        <div class="form-success">Thanks — your comment has been received (demo only).</div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/blog-post-data.js"></script>
+  <script src="../js/blog-post.js"></script>
+</body>
+</html>
