@@ -1,0 +1,77 @@
+/* =========================================================
+   VARIABLES.CSS — Design tokens for Mahu's Notebook
+   A warm editorial palette built for a CS student's
+   blog + project showcase.
+   ========================================================= */
+
+:root {
+  /* ---- Color palette ---- */
+  --color-paper: #FAF6F0;        /* page background */
+  --color-paper-alt: #F1EAE0;     /* slightly deeper panel background */
+  --color-ink: #1F1B16;           /* primary text */
+  --color-ink-soft: #3A332B;      /* secondary headings */
+  --color-muted: #6B5D4F;         /* meta text, captions */
+  --color-border: #E8DFD3;        /* hairline borders, dividers */
+  --color-border-strong: #D8CBB8; /* slightly stronger border */
+
+  --color-rust: #A8431F;          /* primary accent — links, CTAs */
+  --color-rust-dark: #832F14;     /* hover state for rust */
+  --color-rust-light: #D88C68;    /* tints / backgrounds */
+
+  --color-teal: #2F5D5A;          /* secondary accent — tags, highlights */
+  --color-teal-dark: #20413F;
+  --color-teal-light: #6FA39D;
+
+  --color-gold: #C99A4B;          /* tertiary accent — small details */
+
+  --color-white: #FFFFFF;
+  --color-overlay: rgba(31, 27, 22, 0.72);
+
+  /* ---- Typography ---- */
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-body: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+
+  --fs-h1: clamp(2.4rem, 5vw, 4rem);
+  --fs-h2: clamp(1.9rem, 3.4vw, 2.6rem);
+  --fs-h3: clamp(1.4rem, 2.4vw, 1.8rem);
+  --fs-h4: 1.2rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-xsmall: 0.75rem;
+
+  /* ---- Spacing scale (8px base) ---- */
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+  --space-8: 6rem;
+
+  /* ---- Layout ---- */
+  --container-max: 1180px;
+  --container-narrow: 760px;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+
+  /* ---- Shadows ---- */
+  --shadow-sm: 0 2px 8px rgba(31, 27, 22, 0.06);
+  --shadow-md: 0 8px 24px rgba(31, 27, 22, 0.10);
+  --shadow-lg: 0 20px 48px rgba(31, 27, 22, 0.16);
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 160ms;
+  --duration-base: 280ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

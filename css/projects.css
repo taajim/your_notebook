@@ -1,0 +1,21 @@
+/* =========================================================
+   PROJECTS.CSS — Page header (projects.html)
+   ========================================================= */
+
+.page-header {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-header h1 {
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.page-header__lede {
+  color: var(--color-muted);
+  max-width: 560px;
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}

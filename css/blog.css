@@ -1,0 +1,95 @@
+/* =========================================================
+   BLOG.CSS — Page header, filter bar (blog.html)
+   ========================================================= */
+
+.page-header {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-header h1 {
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.page-header__lede {
+  color: var(--color-muted);
+  max-width: 560px;
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}
+
+.filter-bar {
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-paper-alt);
+}
+
+.filter-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+}
+
+.filter-bar__tabs {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  background: none;
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-ink-soft);
+  transition: background-color var(--duration-fast) var(--ease), color var(--duration-fast) var(--ease), border-color var(--duration-fast) var(--ease);
+}
+
+.filter-tab:hover {
+  border-color: var(--color-rust);
+  color: var(--color-rust);
+}
+
+.filter-tab.is-active {
+  background-color: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.filter-bar__search input {
+  width: 240px;
+  padding: 0.55rem 0.9rem;
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 999px;
+  background-color: var(--color-white);
+  font-size: var(--fs-small);
+}
+
+.filter-bar__search input:focus {
+  outline: none;
+  border-color: var(--color-rust);
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--color-muted);
+  padding: var(--space-6) 0;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 640px) {
+  .filter-bar__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filter-bar__search input {
+    width: 100%;
+  }
+}

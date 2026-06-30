@@ -1,0 +1,183 @@
+/* =========================================================
+   HOME.CSS — Hero and CTA strip (index.html only)
+   ========================================================= */
+
+.hero {
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-7);
+  background-color: var(--color-paper);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.hero__content h1 {
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.hero__content h1 em {
+  font-style: italic;
+  color: var(--color-rust);
+}
+
+.hero__lede {
+  font-size: 1.1rem;
+  color: var(--color-ink-soft);
+  max-width: 480px;
+  margin-bottom: var(--space-5);
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-6);
+}
+
+.hero__stats {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__stat-num {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.hero__stat-label {
+  font-size: var(--fs-xsmall);
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---- Hero visual: stacked notebook cards ---- */
+.hero__visual {
+  position: relative;
+  height: 420px;
+}
+
+.hero__card {
+  position: absolute;
+  width: 78%;
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.hero__card-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.hero__card-meta {
+  font-size: var(--fs-xsmall);
+  color: var(--color-muted);
+}
+
+.hero__card--1 {
+  top: 12%;
+  left: 0;
+  transform: rotate(-3deg);
+  z-index: 2;
+}
+
+.hero__card--2 {
+  bottom: 8%;
+  right: 0;
+  transform: rotate(2deg);
+  z-index: 1;
+  background-color: var(--color-paper-alt);
+}
+
+.hero__scribble {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: radial-gradient(circle at 70% 20%, rgba(201, 154, 75, 0.18), transparent 45%),
+                     radial-gradient(circle at 20% 80%, rgba(47, 93, 90, 0.12), transparent 45%);
+}
+
+/* ---- CTA strip ---- */
+.cta-strip {
+  background-color: var(--color-teal);
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+.cta-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.cta-strip h2 {
+  color: var(--color-paper);
+  font-size: var(--fs-h3);
+  margin-bottom: var(--space-2);
+}
+
+.cta-strip p {
+  color: rgba(250, 246, 240, 0.82);
+  max-width: 480px;
+  margin-bottom: 0;
+}
+
+.cta-strip .btn--primary {
+  background-color: var(--color-paper);
+  color: var(--color-teal-dark);
+  border-color: var(--color-paper);
+  flex-shrink: 0;
+}
+
+.cta-strip .btn--primary:hover {
+  background-color: var(--color-rust-light);
+  border-color: var(--color-rust-light);
+  color: var(--color-ink);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+  .hero__visual {
+    height: 320px;
+    margin-top: var(--space-4);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__stats {
+    gap: var(--space-4);
+  }
+  .cta-strip__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+}

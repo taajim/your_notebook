@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahu's Notebook — Blog &amp; Project Showcase</title>
+  <meta name="description" content="A CS undergraduate's notebook of write-ups on operating systems, web development, and the projects built along the way.">
+  <link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">M</span>
+        Your Notebook
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="primaryNav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link is-active">Home</a></li>
+          <li><a href="pages/blog.html" class="nav__link">Blog</a></li>
+          <li><a href="pages/projects.html" class="nav__link">Projects</a></li>
+          <li><a href="pages/about.html" class="nav__link">About</a></li>
+          <li><a href="pages/contact.html" class="nav__link">Contact</a></li>
+        </ul>
+        <a href="pages/contact.html" class="btn btn--primary btn--sm nav__cta">Say hello</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">CSE Undergraduate &middot; Varendra University</p>
+          <h1>Notes from the lab, <em>shipped</em> as a notebook.</h1>
+          <p class="hero__lede">
+            I'm Mahu — I write about operating systems, web development, and whatever
+            breaks (then fixes) on my desk. This is where the write-ups and the
+            side projects live side by side.
+          </p>
+          <div class="hero__actions">
+            <a href="pages/blog.html" class="btn btn--primary">Read the blog</a>
+            <a href="pages/projects.html" class="btn btn--outline">See the projects</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-num">12+</span>
+              <span class="hero__stat-label">Articles written</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">6</span>
+              <span class="hero__stat-label">Projects shipped</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">3rd</span>
+              <span class="hero__stat-label">Year, CSE</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__card hero__card--1">
+            <span class="tag tag--rust">Operating Systems</span>
+            <p class="hero__card-title">Deadlock &amp; the Banker's Algorithm</p>
+            <span class="hero__card-meta">8 min read</span>
+          </div>
+          <div class="hero__card hero__card--2">
+            <span class="tag">Web Dev</span>
+            <p class="hero__card-title">Building a CSS design system</p>
+            <span class="hero__card-meta">6 min read</span>
+          </div>
+          <div class="hero__scribble"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LATEST POSTS ============ -->
+    <section class="section" id="latest">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">From the notebook</p>
+          <h2>Latest posts</h2>
+          <p>Write-ups on systems concepts and front-end builds — explained the way I wish someone had explained them to me first.</p>
+        </div>
+
+        <div class="grid grid--blog">
+
+          <article class="blog-card">
+            <a class="blog-card__media" href="pages/blog-post.html?post=banker-algorithm" aria-label="Read: Understanding the Banker's Algorithm">
+              <img src="images/blog/post-1.svg" alt="Abstract editorial illustration representing deadlock avoidance and resource allocation graphs" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>Operating Systems</span>
+                <span class="dot"></span>
+                <span>Jun 18, 2026</span>
+              </div>
+              <h3 class="blog-card__title"><a href="pages/blog-post.html?post=banker-algorithm">Understanding the Banker's Algorithm, one allocation at a time</a></h3>
+              <p class="blog-card__excerpt">A walkthrough of deadlock avoidance using safe-state checking — with the matrix tables that finally made it click before my CSE 3203 exam.</p>
+              <a class="blog-card__readmore" href="pages/blog-post.html?post=banker-algorithm">Read article <span class="arrow">&rarr;</span></a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-card__media" href="pages/blog-post.html?post=css-design-system" aria-label="Read: Building a CSS design system from scratch">
+              <img src="images/blog/post-2.svg" alt="Abstract editorial illustration representing a grid-based design system" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>Web Development</span>
+                <span class="dot"></span>
+                <span>Jun 10, 2026</span>
+              </div>
+              <h3 class="blog-card__title"><a href="pages/blog-post.html?post=css-design-system">Building a CSS design system from scratch</a></h3>
+              <p class="blog-card__excerpt">Tokens, components, and the handful of decisions that kept this very site's stylesheets from turning into spaghetti.</p>
+              <a class="blog-card__readmore" href="pages/blog-post.html?post=css-design-system">Read article <span class="arrow">&rarr;</span></a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-card__media" href="pages/blog-post.html?post=process-synchronization" aria-label="Read: Process synchronization without losing your mind">
+              <img src="images/blog/post-3.svg" alt="Abstract editorial illustration representing concurrent processes and synchronization" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>Operating Systems</span>
+                <span class="dot"></span>
+                <span>May 29, 2026</span>
+              </div>
+              <h3 class="blog-card__title"><a href="pages/blog-post.html?post=process-synchronization">Process synchronization without losing your mind</a></h3>
+              <p class="blog-card__excerpt">Race conditions, critical sections, and why semaphores clicked for me only after I drew them as traffic lights.</p>
+              <a class="blog-card__readmore" href="pages/blog-post.html?post=process-synchronization">Read article <span class="arrow">&rarr;</span></a>
+            </div>
+          </article>
+
+        </div>
+
+        <div style="text-align:center; margin-top: var(--space-6);">
+          <a href="pages/blog.html" class="btn btn--outline">View all posts</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PROJECTS ============ -->
+    <section class="section section--alt" id="featured-projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">From the workbench</p>
+          <h2>Featured projects</h2>
+          <p>A few things I've built end to end — click a card for details, screenshots, and links to the source.</p>
+        </div>
+
+        <div class="grid grid--projects">
+
+          <div class="project-card" tabindex="0" data-modal="modal-project-1">
+            <span class="project-card__label">Featured</span>
+            <div class="project-card__media">
+              <img src="images/projects/project-1.svg" alt="Interface mockup preview of the Notebook blog and showcase website" loading="lazy">
+            </div>
+            <div class="project-card__overlay">
+              <p class="project-card__overlay-title">Notebook — Blog &amp; Showcase Site</p>
+              <p class="project-card__overlay-desc">This very site: a responsive static blog and project showcase built with HTML and CSS.</p>
+              <button class="btn btn--primary btn--sm" type="button" data-modal-trigger="modal-project-1">View details</button>
+            </div>
+          </div>
+
+          <div class="project-card" tabindex="0" data-modal="modal-project-2">
+            <span class="project-card__label">Coursework</span>
+            <div class="project-card__media">
+              <img src="images/projects/project-2.svg" alt="Interface mockup preview of the OS process scheduler simulator" loading="lazy">
+            </div>
+            <div class="project-card__overlay">
+              <p class="project-card__overlay-title">Process Scheduler Simulator</p>
+              <p class="project-card__overlay-desc">A visual simulator for FCFS, SJF, and Round Robin scheduling built for CSE 3203.</p>
+              <button class="btn btn--primary btn--sm" type="button" data-modal-trigger="modal-project-2">View details</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align:center; margin-top: var(--space-6);">
+          <a href="pages/projects.html" class="btn btn--teal">Browse all projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWSLETTER / CTA STRIP ============ -->
+    <section class="cta-strip">
+      <div class="container cta-strip__inner">
+        <div>
+          <h2>Have a question about a post or project?</h2>
+          <p>I read every message — about coursework, collaboration, or just to say the Banker's Algorithm post finally made sense.</p>
+        </div>
+        <a href="pages/contact.html" class="btn btn--primary">Get in touch</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">Your Notebook</p>
+          <p class="footer__about">A running notebook of operating-systems write-ups and web projects, built by a CSE undergraduate at Varendra University.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Navigate</p>
+          <ul class="footer__list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/blog.html">Blog</a></li>
+            <li><a href="pages/projects.html">Projects</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Topics</p>
+          <ul class="footer__list">
+            <li><a href="pages/blog.html?topic=operating-systems">Operating Systems</a></li>
+            <li><a href="pages/blog.html?topic=web-development">Web Development</a></li>
+            <li><a href="pages/blog.html?topic=academics">Academics</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Your Notebook. Built with HTML &amp; CSS.</p>
+        <ul class="footer__social">
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:mahu@example.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ PROJECT MODALS ============ -->
+  <div class="modal-overlay" id="modal-project-1" aria-hidden="true">
+    <div class="modal modal--wide" role="dialog" aria-modal="true" aria-labelledby="modal-project-1-title">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close dialog">&times;</button>
+      <p class="eyebrow modal__eyebrow">Featured Project</p>
+      <h3 class="modal__title" id="modal-project-1-title">Notebook — Blog &amp; Showcase Site</h3>
+      <div class="modal__media">
+        <img src="images/projects/project-1.svg" alt="Preview of the Notebook blog and showcase site interface">
+      </div>
+      <div class="modal__body">
+        <p>A fully static, responsive website combining a blog and a project showcase in one consistent design system. Built entirely with semantic HTML and hand-written CSS — no frameworks — with reusable components for cards, navigation, and popup forms.</p>
+        <ul class="tag-list">
+          <li class="tag">HTML5</li>
+          <li class="tag">CSS3</li>
+          <li class="tag">Responsive Design</li>
+          <li class="tag tag--rust">Flexbox &amp; Grid</li>
+        </ul>
+      </div>
+      <div class="modal__footer">
+        <a href="#" class="btn btn--primary btn--sm">View source</a>
+        <a href="pages/projects.html" class="btn btn--outline btn--sm">All projects</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-project-2" aria-hidden="true">
+    <div class="modal modal--wide" role="dialog" aria-modal="true" aria-labelledby="modal-project-2-title">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close dialog">&times;</button>
+      <p class="eyebrow modal__eyebrow">Coursework Project</p>
+      <h3 class="modal__title" id="modal-project-2-title">Process Scheduler Simulator</h3>
+      <div class="modal__media">
+        <img src="images/projects/project-2.svg" alt="Preview of the process scheduler simulator interface">
+      </div>
+      <div class="modal__body">
+        <p>An interactive visualization of CPU scheduling algorithms — First-Come-First-Served, Shortest Job First, and Round Robin — showing Gantt charts and computed waiting/turnaround times for a given process set.</p>
+        <ul class="tag-list">
+          <li class="tag">JavaScript</li>
+          <li class="tag">Operating Systems</li>
+          <li class="tag tag--rust">CSE 3203</li>
+        </ul>
+      </div>
+      <div class="modal__footer">
+        <a href="#" class="btn btn--primary btn--sm">View source</a>
+        <a href="pages/projects.html" class="btn btn--outline btn--sm">All projects</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
